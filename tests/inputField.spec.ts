@@ -27,7 +27,7 @@ test('Test Case 1: Update pet type', async ({page}) => {
 
   const Name = page.locator(':text-is("Name")')
   await expect(Name).toBeVisible()
-  await page.waitForTimeout(1000)
+  await page.waitForTimeout(3000)
   const inputFieldSelector = '#name';
   await page.fill(inputFieldSelector, 'rabbit');
   await page.getByRole('button', {name: "Update"}).click() 
@@ -45,7 +45,7 @@ test('Test Case 1: Update pet type', async ({page}) => {
 
   const Name2 = page.locator(':text-is("Name")')
   await expect(Name2).toBeVisible()
-  await page.waitForTimeout(1000)
+  await page.waitForTimeout(3000)
   const inputFieldSelector2 = '#name';
   await page.fill(inputFieldSelector2, 'cat');
   await page.getByRole('button', {name: "Update"}).click() 
